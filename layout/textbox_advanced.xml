@@ -1,0 +1,84 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:id="@+id/linear_hey"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="2dp"
+		android:layout_marginBottom="2dp"
+		android:minHeight="40dp"
+		android:paddingLeft="12dp"
+		android:paddingTop="6dp"
+		android:paddingRight="12dp"
+		android:paddingBottom="6dp"
+		android:background="#151515"
+		android:orientation="horizontal"
+		android:gravity="start|center_vertical"
+		android:paddingStart="0dp"
+		android:paddingEnd="10dp">
+		<LinearLayout
+			android:id="@+id/linear_info"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:padding="2dp"
+			android:orientation="vertical"
+			android:gravity="start|top"
+			android:layout_marginEnd="10dp"
+			android:layout_weight="1">
+			<TextView
+				android:id="@+id/textview_name_option"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="2dp"
+				android:text=""
+				android:textSize="12sp"
+				android:textColor="#FFFFFF" />
+			<TextView
+				android:id="@+id/textview_iswhatda"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text=""
+				android:textSize="9sp"
+				android:textColor="#E0E0E0" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/linear_of_textbox"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="1"
+			android:gravity="end"
+			android:paddingStart="0dp"
+			android:paddingEnd="0dp">
+			<LinearLayout
+				android:id="@+id/linear_edittext13"
+				android:layout_width="160dp"
+				android:layout_height="28dp"
+				android:background="#151515"
+				android:gravity="center_vertical"
+				android:orientation="horizontal"
+				android:layout_marginStart="0dp"
+				android:layout_marginEnd="0dp"
+				android:paddingStart="0dp"
+				android:paddingEnd="0dp">
+
+				<EditText
+					android:id="@+id/edittext"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@android:color/transparent"
+					android:gravity="start|center_vertical"
+					android:paddingStart="10dp"
+					android:paddingEnd="0dp"
+					android:text=""
+					android:textColor="#FFFFFF"
+					android:textColorHint="#607D8B"
+					android:textSize="11sp" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

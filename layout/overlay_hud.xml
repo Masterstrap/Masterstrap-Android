@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/overlay_panel"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="72dp"
+        android:background="#E6181822"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/overlay_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/overlay_hud_title"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/overlay_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#A0A0B0"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/overlay_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#7ED6A5"
+            android:textSize="10sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/overlay_flags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#D0D0E0"
+                android:textSize="10sp" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/overlay_attach_hook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/overlay_hud_attach_hook" />
+
+        <Button
+            android:id="@+id/overlay_apply_live"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/overlay_hud_apply_live" />
+
+        <Button
+            android:id="@+id/overlay_apply_next_launch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/overlay_hud_apply_next_launch" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/overlay_icon"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/overlay_hud_title"
+        android:scaleType="fitCenter"
+        android:src="@drawable/masterstrap" />
+</FrameLayout>

@@ -1,0 +1,37 @@
+<resources>
+	<style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorControlHighlight">@color/colorControlHighlight</item>
+		<item name="colorControlNormal">@color/colorControlNormal</item>
+		<item name="android:windowBackground">@color/surfaceBackground</item>
+		<item name="android:statusBarColor">@color/surfaceBackground</item>
+		<item name="android:navigationBarColor">@color/surfaceBackground</item>
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:windowLightStatusBar">false</item>
+	</style>
+
+	<style name="AppTheme.FullScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="android:windowFullscreen">true</item>
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorControlHighlight">@color/colorControlHighlight</item>
+		<item name="colorControlNormal">@color/colorControlNormal</item>
+	</style>
+
+	<style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorControlHighlight">@color/colorControlHighlight</item>
+		<item name="colorControlNormal">@color/colorControlNormal</item>
+	</style>
+
+	<style name="AppTheme.NoStatusBar" parent="AppTheme">
+		<item name="android:windowFullscreen">true</item>
+	</style>
+
+	<style name="AppTheme.DebugActivity" parent="AppTheme" />
+</resources>

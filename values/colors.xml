@@ -1,0 +1,25 @@
+<resources>
+	<color name="colorPrimary">#C8CFD8</color>
+	<color name="colorPrimaryDark">#A7B0BC</color>
+	<color name="colorAccent">#DCE1E7</color>
+	<color name="colorControlHighlight">#33DCE1E7</color>
+	<color name="colorControlNormal">#AEB7C3</color>
+	<color name="surfaceBackground">#34363B</color>
+	<color name="surfacePanel">#2D2F34</color>
+	<color name="surfaceCard">#24262B</color>
+	<color name="surfaceCardAlt">#1F2126</color>
+	<color name="surfaceStroke">#4A4D54</color>
+	<color name="surfaceAccent">#565A62</color>
+	<color name="textPrimary">#F7F8FC</color>
+	<color name="textSecondary">#B8C0D5</color>
+	<color name="textMuted">#94A3B8</color>
+	<color name="success">#43D19E</color>
+	<color name="dangerSurface">#221416</color>
+	<color name="purple_200">#BB86FC</color>
+	<color name="purple_500">#6200EE</color>
+	<color name="purple_700">#3700B3</color>
+	<color name="teal_200">#03DAC5</color>
+	<color name="teal_700">#018786</color>
+	<color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+</resources>
