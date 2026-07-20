@@ -73,6 +73,339 @@ Need help, want to purchase a license, or just want to chat with 10,000+ other u
 
 👉 **[Join the Official Masterstrap Discord](https://discord.com/users/923252600952979477)**
 
+---
+
+## 🚀 Android FastFlags Reference
+
+---
+
+## 📊 Graphics Quality
+
+### FRM Quality Level (Lowest = 1, Highest = 21)
+```json
+{
+  "DFIntDebugFRMQualityLevelOverride": 1
+}
+```
+
+### MSAA Anti-aliasing (0=Off, 1=1x, 2=2x, 4=4x)
+```json
+{
+  "FIntDebugForceMSAASamples": 1
+}
+```
+
+### Texture Quality Override (0=Auto, 1=Low, 2=Med, 3=High)
+```json
+{
+  "DFFlagTextureQualityOverrideEnabled": "True",
+  "DFIntTextureQualityOverride": 1
+}
+```
+
+### Skip Texture Mip Levels (saves VRAM, 8–12 recommended on low-end)
+```json
+{
+  "DFIntDebugTextureManagerSkipMips": 8,
+  "DFIntDebugLimitMinTextureResolutionWhenSkipMips": 128
+}
+```
+
+### Disable GUI Blur
+```json
+{
+  "FIntRobloxGuiBlurIntensity": 0
+}
+```
+
+### Disable Wang-Tile Shader (Mobile-specific shader, reduces GPU load)
+```json
+{
+  "FFlagDebugRenderDisableWangMobile": "True"
+}
+```
+
+---
+
+## 🖥️ Resolution — Dynamic Resolution Scaling (DRS)
+
+> DRS automatically reduces internal render resolution to maintain target FPS. Recommended for mid-range and low-end Android devices.
+
+### Enable DRS
+```json
+{
+  "FFlagAutomaticDRS": "True",
+  "FFlagDRSBasicManagement": "True",
+  "FFlagAutomaticDRSEnableLowDPI": "True"
+}
+```
+
+### DRS Intensity (HundredthPercent = how aggressive, QLThreshold = trigger sensitivity)
+```json
+{
+  "FIntAutomaticDRSHundredthPercent": 50,
+  "FIntAutomaticDRSQLThreshold": 5
+}
+```
+
+### Use GPU Time for DRS Decisions (more accurate than CPU time)
+```json
+{
+  "FFlagAutomaticDRSUseGpuTime": "True",
+  "FFlagAutomaticDRSSkipInvalidGpuTimeSamples": "True"
+}
+```
+
+---
+
+## 🌑 Shadows
+
+### Disable All Shadows (biggest GPU saving)
+```json
+{
+  "FIntRenderShadowmapBias": -1
+}
+```
+
+### Disable Huge-Radius Shadow Casters
+```json
+{
+  "FIntRenderShadowHugeRadius": 0
+}
+```
+
+### Shadow Atlas Auto-Downscale at 50% Usage
+```json
+{
+  "FIntRenderMaxShadowAtlasUsageBeforeDownscale": 50
+}
+```
+
+---
+
+## 🌿 Grass & Vegetation
+
+### Remove All Grass
+```json
+{
+  "FIntFRMMaxGrassDistance": 0,
+  "FIntFRMMinGrassDistance": 0
+}
+```
+
+---
+
+## ✨ Post-Processing Effects
+
+### Disable All Post-FX (Bloom, Depth-of-Field, Color Grading)
+```json
+{
+  "DFIntRenderPostFxBasePixelCount": 0
+}
+```
+
+### Bloom FRM Cutoff (cut bloom at low quality tier)
+```json
+{
+  "FFlagBloomFrmCutoff": "True"
+}
+```
+
+---
+
+## 🧱 Mesh & Level of Detail
+
+### Force Low-Poly Mode (all distances use lowest LOD)
+```json
+{
+  "DFIntCSGLevelOfDetailSwitchingDistanceL12": 0,
+  "DFIntCSGLevelOfDetailSwitchingDistanceL23": 0,
+  "DFIntCSGLevelOfDetailSwitchingDistanceL34": 0
+}
+```
+
+### Android Adaptive Mesh Cache
+```json
+{
+  "FFlagAdaptiveMeshCacheSizeForAndroid": "True",
+  "FFlagUnifiedMeshCacheSizeComputation": "True"
+}
+```
+
+### Limit Mesh Cache Size (128MB = Low RAM, 256MB = Mid, 512MB = High)
+```json
+{
+  "FIntDefaultMeshCacheSizeMB": 256
+}
+```
+
+### Enable Mesh Preloading (reduces mid-game stutter)
+```json
+{
+  "DFFlagEnableMeshPreloading2": "True"
+}
+```
+
+---
+
+## 🎭 Animation & Threading
+
+### Animation Bone LOD (skip bone work on distant characters)
+```json
+{
+  "FFlagAnimationLodBoneEnabled": "True"
+}
+```
+
+### Animation Parallel Threads (1=Safe, 2=Recommended, 4=High-end only)
+```json
+{
+  "FIntAnimationParallelThreadMax": 2
+}
+```
+
+### Humanoid Parallel Threads
+```json
+{
+  "FIntHumanoidParallelThreadMax": 2
+}
+```
+
+### Animation Clip Memory Cache (avoid re-decoding same animation)
+```json
+{
+  "FFlagAnimationClipMemCacheEnabled": "True"
+}
+```
+
+---
+
+## 📱 Android Platform
+
+### Use Optimized GLView Surface
+```json
+{
+  "FFlagAndroidGLView": "True"
+}
+```
+
+### Enable Android VSync (eliminates screen tearing)
+```json
+{
+  "FFlagEnableAndroidVsync": "True"
+}
+```
+
+### Enable Android Power Manager (thermal throttle detection)
+```json
+{
+  "FFlagEnableAndroidPowerManager": "True"
+}
+```
+
+### Fix Session Drop When App is Backgrounded
+```json
+{
+  "FFlagFixAndroidBackgroundedSession": "True"
+}
+```
+
+### Smooth Touch Scroll (defer scroll events to frame boundary)
+```json
+{
+  "FFlagScrollerDeferTouchScrollToFrameEnd": "True"
+}
+```
+
+### Touch Event Throttle (16ms = 60FPS target, 33ms = 30FPS)
+```json
+{
+  "FIntFrameRateMSToReduceTouchEvents": 16
+}
+```
+
+---
+
+## 🌐 Network & Assets
+
+### Batch Asset Join Requests (fewer round-trips = faster load)
+```json
+{
+  "FFlagBatchNetAssetJoinBlobEnable": "True",
+  "FFlagBatchNetAssetJoinBlob": "True"
+}
+```
+
+---
+
+## 🔧 Render Pipeline
+
+### Limit Render Sim to 60Hz (prevents physics overwork)
+```json
+{
+  "FFlagAuroraLimit60HzRenderSim": "True"
+}
+```
+
+### Disable DPI Downscaling (preserve quality on HDPI screens)
+```json
+{
+  "DFFlagDisableDPIScale": "True"
+}
+```
+
+### FPS Counter (for debugging)
+```json
+{
+  "FFlagDebugDisplayFPS": "True"
+}
+```
+
+### Optimize Part Rendering
+```json
+{
+  "DFFlagOptimizePartsInPart": "True"
+}
+```
+
+---
+
+## ⚡ FPS Boost Preset (All-in-One for Low-End Android)
+
+```json
+{
+  "FFlagAutomaticDRS": "True",
+  "FFlagDRSBasicManagement": "True",
+  "FFlagAutomaticDRSEnableLowDPI": "True",
+  "FIntAutomaticDRSHundredthPercent": 75,
+  "FIntAutomaticDRSQLThreshold": 5,
+  "DFIntDebugFRMQualityLevelOverride": 1,
+  "FIntDebugForceMSAASamples": 1,
+  "FIntRobloxGuiBlurIntensity": 0,
+  "DFIntRenderPostFxBasePixelCount": 0,
+  "FIntRenderShadowmapBias": -1,
+  "FIntFRMMaxGrassDistance": 0,
+  "FIntFRMMinGrassDistance": 0,
+  "FFlagAdaptiveMeshCacheSizeForAndroid": "True",
+  "FFlagUnifiedMeshCacheSizeComputation": "True",
+  "FIntDefaultMeshCacheSizeMB": 256,
+  "FFlagAnimationLodBoneEnabled": "True",
+  "FIntAnimationParallelThreadMax": 2,
+  "FIntHumanoidParallelThreadMax": 2,
+  "FFlagAuroraLimit60HzRenderSim": "True",
+  "FFlagAndroidGLView": "True",
+  "FFlagEnableAndroidVsync": "True",
+  "FFlagEnableAndroidPowerManager": "True",
+  "FFlagBatchNetAssetJoinBlobEnable": "True",
+  "FFlagBatchNetAssetJoinBlob": "True",
+  "FFlagBloomFrmCutoff": "True",
+  "DFFlagOptimizePartsInPart": "True",
+  "DFIntTaskSchedulerTargetFps": 60
+}
+```
+
+---
+
 <br>
 <div align="center">
   <sub>Built with ❤️ by the Masterstrap Team.</sub>
