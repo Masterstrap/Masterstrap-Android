@@ -9,7 +9,7 @@ test("version endpoint returns uncached version JSON", async () => {
   const body = await response.json();
 
   assert.equal(response.status, 200);
-  assert.equal(body.version, "1.0.1");
+  assert.equal(body.version, "1.0.0");
   assert.match(response.headers.get("cache-control"), /no-store/);
   assert.equal(
     body.download_url,
