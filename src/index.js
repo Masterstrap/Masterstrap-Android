@@ -12,6 +12,8 @@ const JSON_HEADERS = {
   "X-Content-Type-Options": "nosniff",
 };
 
+const VERSION_PATHS = new Set(["/", "/version", "/version.json"]);
+
 function json(body, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
@@ -37,7 +39,7 @@ export default {
         : json({ status: "ok" });
     }
 
-    if (url.pathname !== "/" && url.pathname !== "/version") {
+    if (!VERSION_PATHS.has(url.pathname)) {
       return json({ error: "Not found" }, 404);
     }
 
