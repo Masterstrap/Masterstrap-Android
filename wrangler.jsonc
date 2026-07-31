@@ -1,0 +1,7 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "masterstrap-version-check",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-31",
+  "workers_dev": true
+}
